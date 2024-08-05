@@ -29,43 +29,19 @@ const Footer = () => {
           reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
           pariatur.
         </div>
-        <h3 style={{ marginBottom: "15px" }}>
-          Made With <span style={{ color: "var(--pink)" }}>&#9829;</span> By
-          Mustafa Tantawy
-        </h3>
         <div className="socialIcons">
-          <a
-            className="icon"
-            href="https://www.facebook.com/mostafa.tantawy.921/"
-            style={{ textDecoration: "none", color: "#fff" }}
-            target="_blank"
-          >
+          <span className="icon">
             <FaFacebookF />
-          </a>
-          <a
-            className="icon"
-            href="https://www.instagram.com/dev_moustafa/"
-            style={{ textDecoration: "none", color: "#fff" }}
-            target="_blank"
-          >
+          </span>
+          <span className="icon">
             <FaInstagram />
-          </a>
-          <a
-            className="icon"
-            href="https://x.com/Dev_Mustafa1/"
-            style={{ textDecoration: "none", color: "#fff" }}
-            target="_blank"
-          >
+          </span>
+          <span className="icon">
             <FaTwitter />
-          </a>
-          <a
-            className="icon"
-            href="https://www.linkedin.com/in/mustafa-tantawy/"
-            style={{ textDecoration: "none", color: "#fff" }}
-            target="_blank"
-          >
+          </span>
+          <span className="icon">
             <FaLinkedin />
-          </a>
+          </span>
         </div>
       </ContentWrapper>
     </footer>

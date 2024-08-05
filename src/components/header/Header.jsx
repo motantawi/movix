@@ -6,7 +6,6 @@ import { useNavigate, useLocation } from "react-router-dom";
 
 import "./style.scss";
 import ContentWrapper from "../contentWrapper/ContentWrapper";
-import logo from "../../assets/movix-logo.svg";
 import useAuth from "../../hooks/useAuth";
 
 const Header = () => {
@@ -84,9 +83,9 @@ const Header = () => {
   return (
     <header className={`header ${mobileMenu ? "mobileView" : ""} ${show}`}>
       <ContentWrapper>
-        <div className="logo" onClick={() => navigate("/")}>
-          <img src={logo} alt="Movix Logo" />
-        </div>
+        <h2 className="logo" onClick={() => navigate("/")}>
+          MoviStream
+        </h2>
         <ul className="menuItems">
           <li className="menuItem" onClick={() => navigationHandler("movie")}>
             Movies
