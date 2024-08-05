@@ -74,9 +74,6 @@ const Login = () => {
         <button type="submit">Log In</button>
 
         <div className="login_links">
-          <span className="forgot_password">
-            Forgot Password? <Link to="/auth/forgot-password">here</Link>
-          </span>
           <span className="register_link">
             Don't have an account? <Link to="/auth/register">Sign up</Link>
           </span>

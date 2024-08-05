@@ -1,5 +1,4 @@
-// action - state management
-import { LOGIN, LOGOUT } from "./actions";
+import { LOGIN, LOGOUT, SET_USER } from "./actions";
 
 // initial state
 export const initialState = {
@@ -29,7 +28,13 @@ const auth = (state = initialState, action) => {
         user: null,
       };
     }
-
+    case SET_USER: {
+      const { user } = action.payload;
+      return {
+        ...state,
+        user,
+      };
+    }
     default: {
       return { ...state };
     }

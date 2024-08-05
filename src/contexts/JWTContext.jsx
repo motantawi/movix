@@ -2,7 +2,7 @@ import React, { createContext, useEffect, useReducer } from "react";
 import { jwtDecode } from "jwt-decode";
 
 // Reducer and actions for state management
-import { LOGIN, LOGOUT } from "./auth-reducer/actions";
+import { LOGIN, LOGOUT, SET_USER } from "./auth-reducer/actions";
 import authReducer from "./auth-reducer/auth";
 
 // Project imports
@@ -100,6 +100,14 @@ export const JWTProvider = ({ children }) => {
     }
   };
 
+  const setUser = (user) => {
+    localStorage.setItem("user", JSON.stringify(user));
+    dispatch({
+      type: SET_USER,
+      payload: { user },
+    });
+  };
+
   const logout = () => {
     setSession(null);
     dispatch({ type: LOGOUT });
@@ -110,7 +118,7 @@ export const JWTProvider = ({ children }) => {
   }
 
   return (
-    <JWTContext.Provider value={{ ...state, login, register, logout }}>
+    <JWTContext.Provider value={{ ...state, login, register, setUser, logout }}>
       {children}
     </JWTContext.Provider>
   );
