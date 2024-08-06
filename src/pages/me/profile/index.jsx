@@ -96,7 +96,12 @@ const Profile = () => {
 
     try {
       const res = await updateUserData(filteredData);
-      setUser(res?.user);
+      if (res?.user) {
+        setUser({
+          ...user,
+          ...res.user,
+        });
+      }
       setIsEditing(false);
     } catch (error) {
       console.error(error);
